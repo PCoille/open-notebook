@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-main-navbar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -27,7 +28,30 @@ export class MainNavbarComponent implements OnInit {
 
   public saveFile(){
     const input = localStorage.getItem('input');
-    this.download('open-notebook', input);
+    if (input){
+      this.download('open-notebook', input);
+    }
+    else {
+      console.log('Empty input: didn\'t save');
+    }
   }
 
+  public openDialog() {
+    const dialogRef = this.dialog.open(ClearDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+}
+
+@Component({
+  selector: 'app-clear-dialog',
+  templateUrl: './clear-dialog.html',
+})
+export class ClearDialogComponent {
+  public clearInput(){
+    localStorage.removeItem('input');
+    location.reload();
+  }
 }
