@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ClearDialogComponent } from '../dialogs/clear-dialog/clear-dialog.component';
 
 @Component({
   selector: 'app-main-navbar',
@@ -42,16 +43,5 @@ export class MainNavbarComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-  }
-}
-
-@Component({
-  selector: 'app-clear-dialog',
-  templateUrl: './clear-dialog.html',
-})
-export class ClearDialogComponent {
-  public clearInput(){
-    localStorage.removeItem('input');
-    location.reload();
   }
 }

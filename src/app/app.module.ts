@@ -6,14 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 
-import { MainNavbarComponent, ClearDialogComponent } from './components/main-navbar/main-navbar.component';
+import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
 import { FreeWriteComponent } from './components/free-write/free-write.component';
 import { AppComponent } from './app.component';
 import { ActivityNavbarComponent } from './components/activity-navbar/activity-navbar.component';
 import { ActivityWriteComponent } from './components/activities/activity-write/activity-write.component';
 import { ActivityReadComponent } from './components/activities/activity-read/activity-read.component';
+import { ClearDialogComponent } from './components/dialogs/clear-dialog/clear-dialog.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ActivityReadComponent } from './components/activities/activity-read/act
     ActivityWriteComponent,
     ActivityReadComponent,
     ActivityNavbarComponent,
-    ClearDialogComponent
+    ClearDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,9 +35,12 @@ import { ActivityReadComponent } from './components/activities/activity-read/act
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+
+  ]
 })
 export class AppModule { }
