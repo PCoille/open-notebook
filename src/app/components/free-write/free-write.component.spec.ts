@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FreeWriteComponent } from './free-write.component';
+import { FormsModule } from '@angular/forms';
 
 describe('FreeWriteComponent', () => {
   let component: FreeWriteComponent;
@@ -8,7 +9,8 @@ describe('FreeWriteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FreeWriteComponent ]
+      declarations: [ FreeWriteComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
