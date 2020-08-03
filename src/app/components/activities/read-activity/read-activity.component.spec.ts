@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActivityReadComponent } from './activity-read.component';
+import { ReadActivityComponent } from './read-activity.component';
 
-describe('ActivityReadComponent', () => {
-  let component: ActivityReadComponent;
-  let fixture: ComponentFixture<ActivityReadComponent>;
+describe('ReadActivityComponent', () => {
+  let component: ReadActivityComponent;
+  let fixture: ComponentFixture<ReadActivityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActivityReadComponent ]
+      declarations: [ ReadActivityComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivityReadComponent);
+    fixture = TestBed.createComponent(ReadActivityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

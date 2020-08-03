@@ -3,9 +3,9 @@ import { MatCalendarCellCssClasses } from '@angular/material/datepicker';
 import { FreeWriteService } from 'src/app/services/free-write.service';
 
 @Component({
-  selector: 'app-activity-write',
-  templateUrl: './activity-write.component.html',
-  styleUrls: ['./activity-write.component.scss'],
+  selector: 'app-write-activity',
+  templateUrl: './write-activity.component.html',
+  styleUrls: ['./write-activity.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class ActivityWriteComponent implements OnInit {

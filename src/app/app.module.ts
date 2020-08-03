@@ -13,8 +13,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
 import { AppComponent } from './app.component';
 import { ActivityNavbarComponent } from './components/activity-navbar/activity-navbar.component';
-import { ActivityWriteComponent } from './components/activities/activity-write/activity-write.component';
-import { ActivityReadComponent } from './components/activities/activity-read/activity-read.component';
+import { WriteActivityComponent } from './components/activities/write-activity/write-activity.component';
+import { ReadActivityComponent } from './components/activities/read-activity/read-activity.component';
 import { ClearDialogComponent } from './components/dialogs/clear-dialog/clear-dialog.component';
 
 
@@ -22,8 +22,8 @@ import { ClearDialogComponent } from './components/dialogs/clear-dialog/clear-di
   declarations: [
     AppComponent,
     MainNavbarComponent,
-    ActivityWriteComponent,
-    ActivityReadComponent,
+    WriteActivityComponent,
+    ReadActivityComponent,
     ActivityNavbarComponent,
     ClearDialogComponent,
 
