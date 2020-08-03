@@ -8,7 +8,7 @@ import { FreeWriteService } from 'src/app/services/free-write.service';
   styleUrls: ['./write-activity.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ActivityWriteComponent implements OnInit {
+export class WriteActivityComponent implements OnInit {
 
   input = '';
 

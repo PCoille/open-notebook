@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ActivityWriteComponent } from './write-activity.component';
+import { WriteActivityComponent } from './write-activity.component';
 import { FormsModule } from '@angular/forms';
 
-describe('ActivityWriteComponent', () => {
-  let component: ActivityWriteComponent;
-  let fixture: ComponentFixture<ActivityWriteComponent>;
+describe('WriteActivityComponent', () => {
+  let component: WriteActivityComponent;
+  let fixture: ComponentFixture<WriteActivityComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        ActivityWriteComponent
+        WriteActivityComponent
       ],
       imports: [ FormsModule ]
     })
@@ -18,7 +18,7 @@ describe('ActivityWriteComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ActivityWriteComponent);
+    fixture = TestBed.createComponent(WriteActivityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
