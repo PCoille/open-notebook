@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FreeWriteService } from 'src/app/services/free-write.service';
 
 @Component({
   selector: 'app-clear-dialog',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClearDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(private freeWriteService: FreeWriteService) { }
 
   ngOnInit(): void {
   }
 
   public clearInput(){
-    localStorage.removeItem('input');
+    this.freeWriteService.clearFreeWrites();
     location.reload();
   }
 }

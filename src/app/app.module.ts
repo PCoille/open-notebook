@@ -7,6 +7,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
 import { FreeWriteComponent } from './components/free-write/free-write.component';
@@ -34,8 +36,10 @@ import { ClearDialogComponent } from './components/dialogs/clear-dialog/clear-di
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
     FormsModule,
     MatDialogModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

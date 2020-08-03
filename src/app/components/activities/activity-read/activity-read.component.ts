@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FreeWriteService } from 'src/app/services/free-write.service';
 
 @Component({
   selector: 'app-activity-read',
@@ -9,10 +10,10 @@ export class ActivityReadComponent implements OnInit {
 
   input = '';
 
-  constructor() { }
+  constructor(private freeWriteService: FreeWriteService) { }
 
   ngOnInit(): void {
-    this.input = localStorage.getItem('input');
+    this.input = this.freeWriteService.getFreeWrites();
   }
 
 }
