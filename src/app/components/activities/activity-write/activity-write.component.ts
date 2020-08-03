@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatCalendarCellCssClasses } from '@angular/material/datepicker';
+import { FreeWriteService } from 'src/app/services/free-write.service';
 
 @Component({
   selector: 'app-activity-write',
@@ -9,9 +10,16 @@ import { MatCalendarCellCssClasses } from '@angular/material/datepicker';
 })
 export class ActivityWriteComponent implements OnInit {
 
-  constructor() { }
+  input = '';
+
+  constructor(private freeWriteService: FreeWriteService) { }
 
   ngOnInit(): void {
+    this.input = this.freeWriteService.getFreeWrites();
+  }
+
+  public saveInput() {
+    this.freeWriteService.setFreeWrites(this.input);
   }
 
   dateClass = (d: Date): MatCalendarCellCssClasses => {

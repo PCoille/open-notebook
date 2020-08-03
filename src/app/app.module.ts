@@ -11,7 +11,6 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { MainNavbarComponent } from './components/main-navbar/main-navbar.component';
-import { FreeWriteComponent } from './components/free-write/free-write.component';
 import { AppComponent } from './app.component';
 import { ActivityNavbarComponent } from './components/activity-navbar/activity-navbar.component';
 import { ActivityWriteComponent } from './components/activities/activity-write/activity-write.component';
@@ -22,7 +21,6 @@ import { ClearDialogComponent } from './components/dialogs/clear-dialog/clear-di
 @NgModule({
   declarations: [
     AppComponent,
-    FreeWriteComponent,
     MainNavbarComponent,
     ActivityWriteComponent,
     ActivityReadComponent,

@@ -5,5 +5,9 @@
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
   </mat-form-field>
-  <app-free-write></app-free-write>
+
+  <div id="free-write-container">
+    <textarea [(ngModel)]="input" matInput id="free-write-textarea"></textarea>
+    <input type="submit" (click)="saveInput();"/>
+  </div>
 </div>
