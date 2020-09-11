@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ClearDialogComponent } from '../dialogs/clear-dialog/clear-dialog.component';
+import { FreeWriteService } from 'src/app/services/free-write.service';
 
 @Component({
   selector: 'app-main-navbar',
@@ -9,7 +10,10 @@ import { ClearDialogComponent } from '../dialogs/clear-dialog/clear-dialog.compo
 })
 export class MainNavbarComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    private freeWriteService: FreeWriteService
+    ) { }
 
   ngOnInit(): void {
   }
@@ -28,16 +32,18 @@ export class MainNavbarComponent implements OnInit {
   }
 
   public saveFile(){
-    const input = localStorage.getItem('input');
-    if (input){
-      this.download('open-notebook', input);
-    }
-    else {
-      console.log('Empty input: didn\'t save');
+    const freeWriteFromStorage = this.freeWriteService.getFreeWrites();
+    if (freeWriteFromStorage){
+      if (freeWriteFromStorage){
+        this.download('open-notebook.json', JSON.stringify(freeWriteFromStorage));
+      }
+      else {
+        console.log('Empty input: didn\'t save');
+      }
     }
   }
 
-  public openDialog() {
+  public openClearDialog() {
     const dialogRef = this.dialog.open(ClearDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {

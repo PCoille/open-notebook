@@ -7,15 +7,17 @@ import { FreeWrite } from 'src/model/free-write.model';
 export class FreeWriteService {
 
   public getFreeWrites() {
-    return localStorage.getItem('free-write');
+    return JSON.parse(localStorage.getItem('free-write'));
   }
 
   public clearFreeWrites() {
     localStorage.removeItem('free-write');
   }
 
-  public setFreeWrites(freeWrite: string) {
-    localStorage.setItem('free-write', freeWrite);
+  public setFreeWrites(freeWrite: FreeWrite) {
+    localStorage.setItem('free-write', JSON.stringify(freeWrite));
+    console.log(freeWrite);
+    console.log(JSON.stringify(freeWrite));
   }
 
   constructor() { }

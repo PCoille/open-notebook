@@ -1,13 +1,14 @@
 <div>
+  <!--
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Choose a date</mat-label>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="freeWrite.date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
   </mat-form-field>
-
+  -->
   <div id="free-write-container">
-    <textarea [(ngModel)]="input" matInput id="free-write-textarea"></textarea>
+    <textarea [(ngModel)]="freeWrite.text" matInput id="free-write-textarea"></textarea>
     <input type="submit" (click)="saveInput();"/>
   </div>
 </div>
